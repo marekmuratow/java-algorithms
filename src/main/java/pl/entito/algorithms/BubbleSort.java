@@ -2,12 +2,15 @@ package pl.entito.algorithms;
 
 public class BubbleSort {
 
-	public static void main(String[] args) {
-		final int[] array = new int[] { 5, 4, 3, 2, 1 };
-		bubbleSort(array);
+	private BubbleSort() {
+
 	}
 
-	private static void bubbleSort(int[] array) {
+	public static void bubbleSort(int[] array) {
+
+		if (array == null) {
+			throw new java.lang.IllegalArgumentException("Null array");
+		}
 
 		for (int k = 0; k < array.length - 1; k++) {
 			for (int i = 0; i < array.length - 1; i++) {
@@ -18,8 +21,6 @@ public class BubbleSort {
 				}
 			}
 		}
-
-		Utils.printArray(array);
 	}
 
 }
