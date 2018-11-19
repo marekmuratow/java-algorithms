@@ -1,22 +1,18 @@
 package pl.entito.algorithms;
 
-import java.util.logging.Logger;
-
 public class BinarySearch {
 
-	static Logger log = Logger.getLogger(BinarySearch.class.getName());
+	private static final int NOT_FOUND = -1;
 
-	public static void main(String[] args) {
+	private BinarySearch() {
 
-		int[] array = new int[] { -11, -7, 2, 3, 5, 10, 11, 15, 20, 88 };
-
-		int key = 88;
-		Utils.printArray(array);
-		int result = binarySearch(array, key);
-		log.info(() -> key + " has " + result + " index");
 	}
 
-	private static int binarySearch(int[] array, int key) {
+	public static int binarySearch(int[] array, int key) {
+
+		if (array == null || array.length == 0) {
+			return NOT_FOUND;
+		}
 
 		int start = 0;
 		int end = array.length - 1;
@@ -37,7 +33,7 @@ public class BinarySearch {
 			}
 		}
 
-		return -1;
+		return NOT_FOUND;
 	}
 
 }
