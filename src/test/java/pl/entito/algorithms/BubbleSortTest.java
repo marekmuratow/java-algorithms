@@ -23,7 +23,11 @@ public class BubbleSortTest {
 
 	@Test
 	public void BubbleSortEmptyArray() {
-		BubbleSort.bubbleSort(new int[] {});
+		int[] array = new int[] {};
+
+		BubbleSort.bubbleSort(array);
+
+		assertArrayEquals(new int[] {}, array);
 	}
 
 	@Test
