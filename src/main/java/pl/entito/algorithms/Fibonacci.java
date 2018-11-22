@@ -1,15 +1,13 @@
 package pl.entito.algorithms;
 
-import java.util.logging.Logger;
-
+/**
+ * Fibonacci Sequence: 0, 1, 1, 2, 3, 5, 8 ...
+ * 
+ */
 public class Fibonacci {
 
-	static Logger log = Logger.getLogger(Fibonacci.class.getSimpleName());
+	private Fibonacci() {
 
-	public static void main(String[] args) {
-		int number = 7;
-		int result = compute(number);
-		log.info(() -> "The last number of a fibonacci sequence " + number + " -> " + result);
 	}
 
 	public static int compute(int n) {
